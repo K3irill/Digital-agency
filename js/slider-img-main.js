@@ -26,21 +26,51 @@ sliderButtonDown.addEventListener("click", function () {
 });
 
 // decrease number of slide by click
-function changeSliderNumber(num) {
-    num = Number(num);
-    let resultNum = num;
-  
-    if (resultNum > 15 || resultNum <= 1) {
-    } else resultNum -= 1;
-  
-    if (resultNum === 0 || resultNum > 9) {
-      resultNum = resultNum.toString();
-    } else resultNum = "0" + resultNum;
-  
-    return (numberOfImgEl.innerText = resultNum);
-  }
+function changeUpSliderNumber(num) {
+  num = Number(num);
+  let resultNum = num;
+
+  if (resultNum > 15 || resultNum <= 1) {
+  } else resultNum -= 1;
+
+  if (resultNum === 0 || resultNum > 9) {
+    resultNum = resultNum.toString();
+  } else resultNum = "0" + resultNum;
+
+  return (numberOfImgEl.innerText = resultNum);
+}
 
 sliderButtonUp.addEventListener("click", function () {
-    changeSliderNumber(numberOfImgEl.innerText);
-  });
-  
+  changeUpSliderNumber(numberOfImgEl.innerText);
+});
+
+// filling of sliderScales
+const sliderFillScales = document.getElementById("sliderFillScales");
+
+function decreaseSliderFillScales(value) {
+  let result = +value;
+  if (result > 149) {
+  } else result += 9.5;
+
+  sliderFillScales.style.height = result + "px";
+}
+
+console.log(sliderFillScales.clientHeight);
+
+sliderButtonDown.addEventListener("click", function () {
+  decreaseSliderFillScales(sliderFillScales.clientHeight);
+});
+
+function increaseSliderFillScales(value) {
+  let result = +value;
+  if (result < 16) {
+  } else result -= 9.5;
+
+  sliderFillScales.style.height = result + "px";
+}
+
+sliderButtonUp.addEventListener("click", function () {
+    increaseSliderFillScales(sliderFillScales.clientHeight);
+});
+
+
