@@ -24,7 +24,12 @@
         <div class="header__container __container">
           <div class="header__interection">
             <div class="header__menu">
-              <button class="header__menu_menu">
+              <button
+                id="headMenuBtn"
+                class="header__menu_menu"
+                aria-expanded="false"
+                aria-controls="list"
+              >
                 <img
                   class="header__menu_menu-img"
                   src="./img/header/line.svg"
@@ -42,7 +47,7 @@
               <p class="header__menu_title">Меню</p>
             </div>
             <button class="header__interection_like">
-              <img src="./img/header/like.svg" alt="" />
+              <img class="img-svg" src="./img/header/like.svg" alt="" />
             </button>
             <button class="header__interection_search">
               <img src="./img/header/search.svg" alt="" />
@@ -76,6 +81,44 @@
           </div>
         </div>
         <hr class="hr" />
+        <div class="header__hidden-menu hidden-menu __container" aria-hidden="true">
+          <div class="hidden-menu__links-block">
+            <ul class="hidden-menu__links-block_list">
+              <li class="hidden-menu__links-block_item">
+                <a class="hidden-menu__links-block_link" href=""
+                  >Многостраничник</a
+                >
+              </li>
+              <li class="hidden-menu__links-block_item">
+                <a class="hidden-menu__links-block_link" href=""
+                  >Каталог готовых сайтов</a
+                >
+              </li>
+              <li class="hidden-menu__links-block_item">
+                <a class="hidden-menu__links-block_link" href=""
+                  >Настройка рекламы</a
+                >
+              </li>
+              <li class="hidden-menu__links-block_item">
+                <a class="hidden-menu__links-block_link" href="">Лендинг</a>
+              </li>
+              <li class="hidden-menu__links-block_item">
+                <a class="hidden-menu__links-block_link" href=""
+                  >Интернет-Магазин</a
+                >
+              </li>
+              <li class="hidden-menu__links-block_item">
+                <a class="hidden-menu__links-block_link" href=""
+                  >SEO продвижение</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="header__hidden-info">
+            <p class="header__hidden-info_work-time">Пн - Пт 10:00 - 18:00</p>
+            <p class="header__hidden-info_email">info@granss.ru</p>
+          </div>
+        </div>
       </header>
       <main class="pages">
         <div class="page__main-block main-block">
@@ -435,9 +478,9 @@
           <div class="aboutSelf__container __container">
             <div class="aboutSelf__author">
               <img
-              class="aboutSelf__author_imgOfAuthor"
-              src="./img/aboutSelf/author.png"
-              alt=""
+                class="aboutSelf__author_imgOfAuthor"
+                src="./img/aboutSelf/author.png"
+                alt=""
               />
               <!-- <img class="aboutSelf__author-bg-img" src="./img/aboutSelf/about-author__picture.png" alt=""> -->
               <div class="aboutSelf__author__title-wrapper">
@@ -583,29 +626,29 @@
               <div class="footer__social">
                 <div class="footer__social-wrapp">
                   <a class="footer__social-wrapper-link" href=""
-                  ><div class="footer__social-wrapper-img">
-                    <img
-                      class="footer__social-wrapper_img"
-                      src="./img/aboutSelf/instagram-sketched 1.svg"
-                      alt=""
-                    /></div
-                ></a>
-                <a class="footer__social-wrapper-link" href=""
-                  ><div class="footer__social-wrapper-img">
-                    <img
-                      class="footer__social-wrapper_img"
-                      src="./img/aboutSelf/WhatsApp.svg"
-                      alt=""
-                    /></div
-                ></a>
-                <a class="footer__social-wrapper-link" href=""
-                  ><div class="footer__social-wrapper-img">
-                    <img
-                      class="footer__social-wrapper_img"
-                      src="./img/aboutSelf/message.svg"
-                      alt=""
-                    /></div
-                ></a>
+                    ><div class="footer__social-wrapper-img">
+                      <img
+                        class="footer__social-wrapper_img"
+                        src="./img/aboutSelf/instagram-sketched 1.svg"
+                        alt=""
+                      /></div
+                  ></a>
+                  <a class="footer__social-wrapper-link" href=""
+                    ><div class="footer__social-wrapper-img">
+                      <img
+                        class="footer__social-wrapper_img"
+                        src="./img/aboutSelf/WhatsApp.svg"
+                        alt=""
+                      /></div
+                  ></a>
+                  <a class="footer__social-wrapper-link" href=""
+                    ><div class="footer__social-wrapper-img">
+                      <img
+                        class="footer__social-wrapper_img"
+                        src="./img/aboutSelf/message.svg"
+                        alt=""
+                      /></div
+                  ></a>
                 </div>
                 <div class="footer__logo footer__logo-responsive">
                   <a href="#"
@@ -621,12 +664,15 @@
               </div>
             </div>
             <div class="footer__copy">
-              <a class="footer__copy_link" href="">Политика кондифициальности</a>
+              <a class="footer__copy_link" href=""
+                >Политика кондифициальности</a
+              >
               <a class="footer__copy_link" href="">Все права защищены</a>
             </div>
           </div>
         </div>
       </footer>
     </div>
+    <script src="js/header-hidden-menu.js"></script>
   </body>
 </html>
