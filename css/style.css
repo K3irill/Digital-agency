@@ -376,7 +376,7 @@ body {
   left: 0;
   -o-object-fit: contain;
      object-fit: contain;
-  z-index: 10;
+  z-index: 8;
 }
 
 ._ibg-img {
@@ -529,6 +529,10 @@ body {
   }
 }
 .main-block__img-wrapper {
+  display: flex;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
   position: relative;
   z-index: 9;
 }
@@ -558,7 +562,7 @@ body {
 .main-block__laptop {
   z-index: 9;
   position: absolute;
-  top: 152px;
+  top: 0;
   left: -130px;
 }
 .main-block__phone {
@@ -588,6 +592,9 @@ body {
   align-items: center;
   top: 333px;
   left: 445px;
+}
+.main-block__changer-img_link-up, .main-block__changer-img_link-down {
+  background-color: transparent;
 }
 .main-block__changer-img_fill-outs {
   margin: 15px 0px 10px 0px;
@@ -630,6 +637,32 @@ body {
     text-align: center;
   }
 }
+.sliderr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-img {
+  max-width: 500px;
+}
+
+.slide {
+  position: absolute;
+  left: -20px;
+  top: 220px;
+  max-width: 200px;
+  max-height: 200px;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s;
+}
+
+.showing {
+  opacity: 1;
+  z-index: 2;
+}
+
 .SamesTitle-wrapper {
   padding: 125px 0px 56px 0px;
   text-align: center;
@@ -896,11 +929,21 @@ body {
 }
 .survey__bonus .d1 {
   margin: 8px 10px 0px 0px;
+  display: flex;
+  justify-content: center;
   width: 34px;
   height: 34px;
   background: #FFD25A;
   border-radius: 50%;
   box-shadow: inset -3px 3px 10px #45C436;
+}
+.survey__bonus .d1-btn {
+  background-color: transparent;
+  text-align: center;
+}
+.survey__bonus .d1-img {
+  width: 30px;
+  height: 30px;
 }
 
 @media (max-width: 1024px) {
@@ -1358,4 +1401,7 @@ body {
   .footer__logo-responsive {
     display: none;
   }
+}
+.survey_closed {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

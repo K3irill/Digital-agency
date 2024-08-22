@@ -324,7 +324,7 @@ body{
     top: 300px;
     left: 0;
     object-fit: contain;
-    z-index: 10;
+    z-index: 8;
 }
 ._ibg-img{
     position: absolute;
@@ -488,6 +488,10 @@ body{
         }
         
         &__img-wrapper{
+            display: flex;
+            width: 400px;
+            align-items: center;
+            justify-content: center;
             position: relative;
             z-index: 9;
             
@@ -520,7 +524,7 @@ body{
         &__laptop{
             z-index: 9;
             position: absolute;
-            top: 152px;
+            top: 0;
             left: -130px;
         }
         &__phone{
@@ -551,8 +555,8 @@ body{
             align-items: center;
             top: 333px;
             left: 445px;
-            &_link-up {
-
+            &_link-up, &_link-down {
+                background-color: transparent;
             }
     
             &_fill-outs {
@@ -571,9 +575,7 @@ body{
                 height: 16px;
                 background-color: #45C436;
             }
-            &_link-down {
-
-            }
+            
             
             &__numbers-wrapper{
                 position: absolute;
@@ -605,6 +607,33 @@ body{
         align-items: center;
         text-align: center;   
         }
+    }
+    .sliderr{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .slide-img{
+       max-width: 500px;
+     
+    }
+    .slide {
+        position: absolute;
+        left: -20px;
+        top: 220px;
+        max-width: 200px;
+        max-height: 200px;
+        opacity: 0;
+        z-index: 1;
+     
+        -webkit-transition: opacity 1s;
+        -moz-transition: opacity 1s;
+        -o-transition: opacity 1s;
+        transition: opacity 1s;
+    }
+    .showing {
+        opacity: 1;
+        z-index: 2;
     }
     
 // --------------------------------------------------------------
@@ -938,14 +967,22 @@ body{
             }
         .d1 {
             margin: 8px 10px 0px 0px;
+            display: flex;
+            justify-content: center;
             width: 34px; 
             height: 34px;
             background: #FFD25A;
             border-radius: 50%;
             box-shadow: inset -3px 3px 10px #45C436;
             }
-
-            
+        .d1-btn{
+            background-color: transparent;
+            text-align: center;
+        }
+        .d1-img{
+            width: 30px;
+            height: 30px;
+        }
         
     }
     
@@ -1487,3 +1524,6 @@ body{
 
 
 
+.survey_closed{
+    display: none;
+}
