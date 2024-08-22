@@ -65,14 +65,16 @@
                 </button>
               </div>
               <input
-              value=""
+                value=""
                 id="headerSearchInput"
                 class="header__interection_search-input"
                 type="text"
                 placeholder="Лендинг"
               />
               <div class="reset-search-input">
-                <button id="resetInputBtn" class="reset-search-input_button">X</button>
+                <button id="resetInputBtn" class="reset-search-input_button">
+                  X
+                </button>
               </div>
             </div>
           </div>
@@ -186,17 +188,25 @@
               <img class="main-block__money" src="./img/money.png" alt="" />
               <img class="main-block__coin" src="./img/coin.png" alt="" />
               <div class="main-block__changer-img">
-                <a href="" class="main-block__changer-img_link-up"
-                  ><img src="./img/up.svg" alt=""
-                /></a>
+                <button
+                  id="sliderButtonUp"
+                  class="main-block__changer-img_link-up"
+                >
+                  <img src="./img/up.svg" alt="" />
+                </button>
                 <div class="main-block__changer-img_fill-outs">
                   <div class="main-block__changer-img_fill-outs_boot"></div>
                 </div>
-                <a href="" class="main-block__changer-img_link-down"
-                  ><img src="./img/down.svg" alt=""
-                /></a>
+                <button
+                  id="sliderButtonDown"
+                  class="main-block__changer-img_link-down"
+                >
+                  <img src="./img/down.svg" alt="" />
+                </button>
                 <div class="main-block__changer-img__numbers-wrapper">
                   <span
+                    value="01"
+                    id="number-changer-img"
                     class="main-block__changer-img__numbers-wrapper_first-num"
                     >01</span
                   >
@@ -701,5 +711,6 @@
     </div>
     <script src="js/header-hidden-menu.js"></script>
     <script src="js/header-activity.js"></script>
+    <script src="js/slider-img-main.js"></script>
   </body>
 </html>
