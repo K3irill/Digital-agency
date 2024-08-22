@@ -337,7 +337,7 @@ body{
 }
 //----------------------------------------------------
 .main-block {
-    
+        margin-bottom: 120px;
         &__body {
             
             position: relative;
@@ -532,18 +532,21 @@ body{
             position: absolute;
             top: 462px;
             left: -141px;
+            animation: forphoneRotate 5s infinite ease-in-out 0s alternate-reverse;
         }
         &__money{
             z-index: 101;
             position: absolute;
             top: 557px;
             left: 210px;
+            animation: formoneyRotate 5s infinite ease-in-out 0s alternate-reverse;
         }
         &__coin{
             z-index: 101;
             position: absolute;
             top: 448px;
             left: 360px;
+            animation: forcoin 3s infinite ease-in-out 0s alternate-reverse;
         }
 
         &__changer-img {
@@ -599,6 +602,7 @@ body{
             }
             
     }
+    
     @media (max-width:992px) {
         .main-block{
         display: flex;
@@ -635,7 +639,39 @@ body{
         opacity: 1;
         z-index: 2;
     }
-    
+@keyframes formoneyRotate {
+    0%{
+        transform: rotate(-10deg);
+       
+    }50%{
+        
+    }100%{
+        transform: rotate(10deg);
+       }
+} 
+@keyframes forphoneRotate {
+    0%{
+        transform: rotate(10deg);
+       
+    }50%{
+        
+    }100%{
+        transform: rotate(-10deg);
+        
+    }
+} 
+@keyframes forcoin {
+    0%{
+
+        transform: translateY(0in);
+       
+    }50%{
+        
+    }100%{
+        transform: translateY(0.2in);
+        
+    }
+} 
 // --------------------------------------------------------------
 .page {
 
@@ -643,7 +679,10 @@ body{
     }
 }
 .type-of-cite {
-
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 3s ease-in-out;
     &__container {
     }
 
@@ -751,10 +790,14 @@ body{
 // -----------------------------------------------------------------------
 .page {
     &__survey {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: 3s ease-in-out;
     }
 }
 .survey {
-
+    
     &__container {
     }
 
@@ -778,7 +821,7 @@ body{
         border: 1px solid rgba(201, 201, 201, 0.397);
         display: flex;
         justify-content: space-between;
-        padding-right: 42px;
+
         border-radius: 12px;
         box-shadow: 1px  1px 20px rgba(0, 0, 0, 0.13);
         position: relative;
@@ -1068,7 +1111,14 @@ body{
 }
 
 // ------------------------------------------------------------------
+.page__projects{
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 3s ease-in-out;
+}
 .projects {
+    
         &__container{
             display: flex;
             flex-direction: column;
@@ -1178,6 +1228,10 @@ body{
 // -------------------------------------------
 .page__aboutSelf{
     position: relative;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 3s ease-in-out;
 }
 .aboutSelf {
         
@@ -1381,6 +1435,10 @@ body{
 }
 // -------------------------------------------------------------------
 .footer {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 3s ease-in-out;
     margin-top: 40px;
     
     &_link {
@@ -1527,5 +1585,7 @@ body{
 
 
 .survey_closed{
-    display: none;
+    max-width: 0;
+    overflow: hidden;
+    transition: 1s;
 }
