@@ -9,13 +9,13 @@ function changeDownSliderNumber(num) {
   num = Number(num);
   let resultNum = num;
 
-  if (resultNum >= 15 || resultNum < 0) {
+  if (resultNum >= 12 || resultNum < 0) {
+    sliderButtonDown.setAttribute("disabled", true);
   } else resultNum += 1;
 
   if (resultNum === 0 || resultNum > 9) {
     resultNum = resultNum.toString();
   } else resultNum = "0" + resultNum;
-
   return (numberOfImgEl.innerText = resultNum);
 }
 
@@ -30,13 +30,15 @@ function changeUpSliderNumber(num) {
   num = Number(num);
   let resultNum = num;
 
-  if (resultNum > 15 || resultNum <= 1) {
+  if (resultNum > 13 || resultNum <= 1) {
   } else resultNum -= 1;
 
   if (resultNum === 0 || resultNum > 9) {
     resultNum = resultNum.toString();
   } else resultNum = "0" + resultNum;
-
+  if (resultNum < 12) {
+    sliderButtonDown.removeAttribute("disabled");
+  }
   return (numberOfImgEl.innerText = resultNum);
 }
 
@@ -50,7 +52,7 @@ const sliderFillScales = document.getElementById("sliderFillScales");
 function decreaseSliderFillScales(value) {
   let result = +value;
   if (result > 149) {
-  } else result += 9.5;
+  } else result += 11;
 
   sliderFillScales.style.height = result + "px";
 }
@@ -70,7 +72,28 @@ function increaseSliderFillScales(value) {
 }
 
 sliderButtonUp.addEventListener("click", function () {
-    increaseSliderFillScales(sliderFillScales.clientHeight);
+  increaseSliderFillScales(sliderFillScales.clientHeight);
 });
 
+//----
 
+const slides = document.querySelectorAll("#slider .slide");
+let currentSlide = 0;
+slides[currentSlide].className = "slide showing";
+let slideInterval = setInterval(nextSlide, 10000);
+
+function perviousSlide() {
+  slides[currentSlide].className = "slide";
+  if (currentSlide <= 0) {
+  } else currentSlide = currentSlide - 1;
+
+  slides[currentSlide].className = "slide showing";
+}
+function nextSlide() {
+  slides[currentSlide].className = "slide";
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].className = "slide showing";
+}
+sliderButtonUp.addEventListener("click", perviousSlide);
+
+sliderButtonDown.addEventListener("click", nextSlide);
