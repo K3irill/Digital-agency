@@ -5,23 +5,8 @@ function checkPosition() {
   const screenHeight = window.innerHeight;
   const el = document;
   const hiddenByAllElements = document.querySelectorAll("[data-hiddenby]");
-
-  console.log(height);
-  console.log(screenHeight);
-  // Они могут отличаться: если на странице много контента,
-  // высота документа будет больше высоты экрана (отсюда и скролл).
-
-  // Записываем, сколько пикселей пользователь уже проскроллил:
   const scrolled = window.scrollY ;
-  console.log(window.scrollY);
 
-  // Обозначим порог, по приближении к которому
-  // будем вызывать какое-то действие.
-  // В нашем случае — четверть экрана до конца страницы:
-  const threshold = height - screenHeight / 4;
-  console.log(threshold);
-  // Отслеживаем, где находится низ экрана относительно страницы:
-  console.log(hiddenByAllElements);
 if(0 <= scrolled){
   hiddenByAllElements[0].style.cssText = `
   transition: 2s;
