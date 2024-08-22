@@ -974,6 +974,8 @@ body{
             background: #FFD25A;
             border-radius: 50%;
             box-shadow: inset -3px 3px 10px #45C436;
+            position: relative;
+            z-index: 1000;
             }
         .d1-btn{
             background-color: transparent;
