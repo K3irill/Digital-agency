@@ -47,7 +47,12 @@
               <p class="header__menu_title">Меню</p>
             </div>
             <button class="header__interection_like">
-              <img class="img-svg" src="./img/header/like.svg" alt="" />
+              <img
+                id="header-img-like"
+                src="./img/header/like.svg"
+                imgactive="false"
+                alt=""
+              />
             </button>
             <button class="header__interection_search">
               <img src="./img/header/search.svg" alt="" />
@@ -81,7 +86,10 @@
           </div>
         </div>
         <hr class="hr" />
-        <div class="header__hidden-menu hidden-menu __container" aria-hidden="true">
+        <div
+          class="header__hidden-menu hidden-menu __container"
+          aria-hidden="true"
+        >
           <div class="hidden-menu__links-block">
             <ul class="hidden-menu__links-block_list">
               <li class="hidden-menu__links-block_item">
@@ -674,5 +682,6 @@
       </footer>
     </div>
     <script src="js/header-hidden-menu.js"></script>
+    <script src="js/header-activity.js"></script>
   </body>
 </html>
