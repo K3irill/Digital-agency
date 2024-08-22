@@ -149,7 +149,7 @@
         </div>
       </header>
       <main class="pages">
-        <div class="page__main-block main-block">
+        <div hiddenby="300" class="page__main-block main-block">
           <div class="main-block__container __container">
             <div class="main-block__body">
               <h1 class="main-block_title">
@@ -182,7 +182,7 @@
               <div id="slider" class="sliderr">
                 <div class="slide">
                   <img
-                    class="main-block__laptop "
+                    class="main-block__laptop"
                     src="./img/laptop.png"
                     alt="fsafa"
                   />
@@ -268,7 +268,7 @@
           <img class="_ibg _ibg-img" src="./img/bg.jpg" alt="" />
           <img class="_ibg _ibg-img2" src="./img/облока.png" alt="" />
         </div>
-        <div class="page__type-of-cite type-of-cite">
+        <div data-hiddenby="300" class="page__type-of-cite type-of-cite">
           <div class="type-of-cite__container __container">
             <div class="type-of-cite__title-wrapper SamesTitle-wrapper">
               <h2
@@ -338,7 +338,7 @@
             </div>
           </div>
         </div>
-        <div class="page__survey">
+        <div  data-hiddenby="1300"  class="page__survey ">
           <div class="survey__container __container">
             <div class="survey__title-wrapper SamesTitle-wrapper">
               <h2 class="survey__title-wrapper_title SamesTitle-wrapper_title">
@@ -405,7 +405,11 @@
               <div class="survey__bonus">
                 <div class="survey__bonus__block-1"></div>
                 <div class="survey__bonus__block-2">
-                  <div class="d1"><button class="d1-btn"><img class="d1-img" src="img/cross.svg" alt="2141"></button></div>
+                  <div class="d1">
+                    <button class="d1-btn">
+                      <img class="d1-img" src="img/cross.svg" alt="2141" />
+                    </button>
+                  </div>
                 </div>
                 <div class="survey__bonus_main-img-wrapper">
                   <img
@@ -413,7 +417,6 @@
                     src="/img/bonus/man.png"
                     alt=""
                   />
-                  
                 </div>
 
                 <div class="survey__bonus__text-wrapper">
@@ -433,7 +436,7 @@
             </div>
           </div>
         </div>
-        <div class="page__projects">
+        <div data-hiddenby="2200" class="page__projects ">
           <div class="projects__container __container">
             <div class="projects__title-wrapper">
               <h2 class="projects_title SamesTitle-wrapper_title">
@@ -545,7 +548,7 @@
             <a href="" class="projects_link">Загрузить ещё</a>
           </div>
         </div>
-        <div class="page__aboutSelf">
+        <div data-hiddenby="4000" class="page__aboutSelf">
           <img
             class="aboutSelf_background"
             src="./img/aboutSelf/backg.png"
@@ -656,7 +659,7 @@
           </div>
         </div>
       </main>
-      <footer class="footer">
+      <footer data-hiddenby="4200" class="footer">
         <div class="footer__container __container">
           <div class="footer__body">
             <div class="footer__logo">
@@ -753,5 +756,6 @@
     <script src="js/header-activity.js"></script>
     <script src="js/slider-img-main.js"></script>
     <script src="js/survey.js"></script>
+    <script src="js/loading_by_scroll.js"></script>
   </body>
 </html>
