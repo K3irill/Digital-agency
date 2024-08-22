@@ -54,9 +54,27 @@
                 alt=""
               />
             </button>
-            <button class="header__interection_search">
-              <img src="./img/header/search.svg" alt="" />
-            </button>
+
+            <div class="header__interection__wrap-input">
+              <div class="wrap-search-img">
+                <button
+                  id="headerSearchButton"
+                  class="header__interection_search"
+                >
+                  <img src="./img/header/search.svg" alt="" />
+                </button>
+              </div>
+              <input
+              value=""
+                id="headerSearchInput"
+                class="header__interection_search-input"
+                type="text"
+                placeholder="Лендинг"
+              />
+              <div class="reset-search-input">
+                <button id="resetInputBtn" class="reset-search-input_button">X</button>
+              </div>
+            </div>
           </div>
           <div class="header__logo">
             <a href="#"

@@ -54,12 +54,7 @@ body{
         &_search{
             background-color: #fff;
         }
-        @media (min-width:220px) and (max-width:600px) {
-            .header__interection_search{
-                display: none;
-            }
-            
-        }
+        
     }
 
     &__menu {
@@ -224,6 +219,20 @@ body{
         &_link {
             color: #222222;
             text-wrap:nowrap;
+            position: relative;
+            &:hover{
+                // opacity: 0.8;
+                color: #27ad18;
+                &::before{
+                    position: absolute;
+                    left: -9px;
+                    content: '$';
+                }
+                &::after{
+                    position: absolute;
+                    content: '$';
+                }
+            }
         }
     }
     @media (max-width:899px) {
@@ -237,7 +246,7 @@ body{
 }
 .hidden-menu_active{
     transition: 2s;
-    padding: 20px 10px;
+    padding: 20px 12px;
     max-height: 250px;
     
 }
@@ -247,9 +256,52 @@ body{
         
     }
 }
+.header__interection__wrap-input{
 
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #222222;
+    max-width: 35px;
+    overflow: hidden;
+    transition: 1s ease-in-out;
 
+}
+.header__interection_search{
+    padding-bottom: 5px;
+}
+.active-wrap-input{
 
+    max-width: 200px;
+    height: 50px;
+    border-radius: 7px;
+   
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.09) inset;
+}
+.wrap-search-img{
+    margin-right: 10px;
+}
+.header__interection_search-input{
+    background-color: transparent;
+    max-width: 130px;
+    height: 50px;
+    font-size: 16px;
+}
+.reset-search-input{
+    margin-left: 10px;
+    
+}
+.reset-search-input_button{
+    background-color: transparent;
+    color: #0000007a;
+}
+@media (min-width:220px) and (max-width:730px) {
+            .header__interection__wrap-input{
+                display: none;
+            }
+            
+        }
 
 
 // --------------------------------------------------

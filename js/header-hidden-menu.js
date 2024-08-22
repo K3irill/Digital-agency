@@ -7,7 +7,7 @@ const headerBtnMenu = document.querySelector("#headMenuBtn");
 function makeActiveHHM() {
   if (headerHiddenMenu.classList.contains("hidden-menu_active")) {
     headerHiddenMenu.classList.remove("hidden-menu_active");
-    headerElement.classList.remove("header_bgc-white-js")
+    headerElement.classList.remove("header_bgc-white-js");
   } else {
     headerHiddenMenu.classList.add("hidden-menu_active");
     headerElement.classList.add("header_bgc-white-js");
@@ -17,5 +17,3 @@ function makeActiveHHM() {
 headerBtnMenu.addEventListener("click", function (e) {
   makeActiveHHM(e);
 });
-
-
