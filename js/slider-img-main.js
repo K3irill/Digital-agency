@@ -18,8 +18,8 @@ function changeDownSliderNumber(num) {
   } else resultNum = "0" + resultNum;
   return (numberOfImgEl.innerText = resultNum);
 }
+setInterval(() => (changeDownSliderNumber(numberOfImgEl.innerText), decreaseSliderFillScales(sliderFillScales.clientHeight)), 15000)
 
-console.log(numberOfImgEl);
 
 sliderButtonDown.addEventListener("click", function () {
   changeDownSliderNumber(numberOfImgEl.innerText);
@@ -57,7 +57,7 @@ function decreaseSliderFillScales(value) {
   sliderFillScales.style.height = result + "px";
 }
 
-console.log(sliderFillScales.clientHeight);
+
 
 sliderButtonDown.addEventListener("click", function () {
   decreaseSliderFillScales(sliderFillScales.clientHeight);
@@ -80,7 +80,7 @@ sliderButtonUp.addEventListener("click", function () {
 const slides = document.querySelectorAll("#slider .slide");
 let currentSlide = 0;
 slides[currentSlide].className = "slide showing";
-let slideInterval = setInterval(nextSlide, 10000);
+let slideInterval = setInterval(nextSlide, 15000);
 
 function perviousSlide() {
   slides[currentSlide].className = "slide";
