@@ -13,25 +13,25 @@ if(0 <= scrolled){
   opacity: 1;
   height: 100%`;
 }
-if(700 <= scrolled){
+if(500 <= scrolled){
   hiddenByAllElements[1].style.cssText = `
   transition: 2s;
   opacity: 1;
   height: 100%`;
 }
-if(1600 <= scrolled){
+if(1300 <= scrolled){
   hiddenByAllElements[2].style.cssText = `
   transition: 2s;
   opacity: 1;
   height: 100%`;
 }
-if(3300 <= scrolled){
+if(2300 <= scrolled){
   hiddenByAllElements[3].style.cssText = `
   transition: 2s;
   opacity: 1;
   height: 600px`;
 }
-if(3500 <= scrolled){
+if(3000 <= scrolled){
   hiddenByAllElements[4].style.cssText = `
   transition: 2s;
   opacity: 1;
