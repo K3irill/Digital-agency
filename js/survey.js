@@ -6,6 +6,10 @@ const surveyBody = document.querySelector(".survey__body");
 const surveyWrapper = document.querySelector(".survey__survey-wrapper");
 const surveySubtitle = document.querySelector('.survey__title-wrapper_subtitle')
 const surveyEndForm = document.querySelector('.surveyEndForm')
+const surveyNumber = document.getElementById('survey-number')
+const fillingLines = document.querySelectorAll('.survey__body__filling-line-wrapper_filling-line')
+
+
 function closeSurveyBonusBlock() {
   surveyBonusBlock.classList.add("survey_closed");
   surveyBody.style.width = "100%";
@@ -28,12 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
   function showNextBlock() {
     const currentBlockEl = document.getElementById(`block-${currentBlock}`);
     currentBlockEl.classList.add("hidden");
-
+    
     currentBlock++; // Переход к следующему блоку
     if (currentBlock <= totalBlocks) {
       const nextBlockEl = document.getElementById(`block-${currentBlock}`);
       nextBlockEl.classList.remove("hidden");
-
+      surveyNumber.textContent = currentBlock;
+      fillingLines[currentBlock - 1].classList.add('survey__body__filling-line-wrapper_filling-line_active')
       if (currentBlock === totalBlocks) {
         nextBtn.textContent = "ЗАКОНЧИТЬ"; // Изменить текст кнопки
         nextBtn.addEventListener("click", () => {
