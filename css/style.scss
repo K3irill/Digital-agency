@@ -79,6 +79,8 @@ body{
             display: flex;
             flex-direction: column;
             background-color: white;
+            width: 28px;
+            height: 28px;
         }
         &_menu-img{
             padding-bottom: 5px;
@@ -88,6 +90,7 @@ body{
         }
         &_title {
             padding-left: 11px;
+            font-weight: 600;
         }
         @media (min-width:220px) and (max-width:600px) {
             .header__menu_title{
@@ -573,6 +576,12 @@ body{
             left: 445px;
             &_link-up, &_link-down {
                 background-color: transparent;
+                &:hover{
+                    transform: scale(1.1);
+                }
+                &:active{
+                    transform: scale(0.9);
+                }
             }
     
             &_fill-outs {
@@ -1051,6 +1060,14 @@ body{
         .d1-img{
             width: 30px;
             height: 30px;
+            position: relative;
+            top: 1px;
+            &:hover{
+                transform: scale(1.1);
+            }
+            &:active{
+                transform: scale(0.9);
+            }
         }
         
     }

@@ -166,6 +166,8 @@ body {
   display: flex;
   flex-direction: column;
   background-color: white;
+  width: 28px;
+  height: 28px;
 }
 .header__menu_menu-img {
   padding-bottom: 5px;
@@ -175,6 +177,7 @@ body {
 }
 .header__menu_title {
   padding-left: 11px;
+  font-weight: 600;
 }
 @media (min-width: 220px) and (max-width: 600px) {
   .header__menu .header__menu_title {
@@ -611,6 +614,12 @@ body {
 .main-block__changer-img_link-up, .main-block__changer-img_link-down {
   background-color: transparent;
 }
+.main-block__changer-img_link-up:hover, .main-block__changer-img_link-down:hover {
+  transform: scale(1.1);
+}
+.main-block__changer-img_link-up:active, .main-block__changer-img_link-down:active {
+  transform: scale(0.9);
+}
 .main-block__changer-img_fill-outs {
   margin: 15px 0px 10px 0px;
   border: 1px solid #ffffff;
@@ -876,7 +885,6 @@ body {
   color: #ffffff;
   border-radius: 126px;
   border-bottom: 1px solid #059A02;
-  font-size: 16px;
 }
 .survey__body_link::after {
   content: url(/img/survey/arrow.svg);
@@ -971,10 +979,6 @@ body {
   text-align: center;
   border: 1px solid rgb(69, 196, 54);
   border-radius: 9px;
-  &:hover{
-    background-color: #45C436;
-    color: white;
-  }
 }
 .survey__bonus .d3 {
   position: absolute;
@@ -1004,6 +1008,14 @@ body {
 .survey__bonus .d1-img {
   width: 30px;
   height: 30px;
+  position: relative;
+  top: 1px;
+}
+.survey__bonus .d1-img:hover {
+  transform: scale(1.1);
+}
+.survey__bonus .d1-img:active {
+  transform: scale(0.9);
 }
 
 @media (max-width: 1024px) {
