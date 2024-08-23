@@ -40,3 +40,4 @@ headerSearchButton.addEventListener("click", function (e) {
 resetInputBtn.addEventListener("click", function () {
     headerSearchInput.value = '';
 });
+

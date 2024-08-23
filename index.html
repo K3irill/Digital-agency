@@ -24,13 +24,15 @@
         <div class="header__container __container">
           <div class="header__interection">
             <div class="header__menu">
-              <button
-                id="headMenuBtn"
-                class="header__menu_menu"
-                aria-expanded="false"
-                aria-controls="list"
-              >
-                <svg
+              <button id="headMenuBtn" class="header__menu_menu">
+                <div class="burger" id="burger">
+                  <div class="line line1"></div>
+                  <div class="line line2"></div>
+                  <div class="line line3"></div>
+                </div>
+              </button>
+              
+                <!-- <svg
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -50,9 +52,9 @@
                       stroke-linejoin="round"
                     ></path>
                   </g>
-                </svg>
+                </svg> -->
               </button>
-              <p class="header__menu_title">Меню</p>
+              <button id="headMenuBtnTxT" class="header__menu_title">Меню</button>
             </div>
             <button class="header__interection_like">
               <img
