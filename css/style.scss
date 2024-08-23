@@ -6,6 +6,17 @@
 %color2{
     color:#45C436;
 }
+%btn-hover{
+    &:hover{
+        transition: 2s;
+        background: linear-gradient(0deg, #44c436b7, #44c436a4),
+radial-gradient(36.31% 127.36% at 72.66% 83.02%, rgba(167, 255, 157, 0.719) 27.92%, rgba(255, 255, 255, 0) 100%);
+    };
+    &:active{
+        transition: 0.1s;
+        box-shadow: inset 0px 0px 5px #000000a1;
+    }
+}
 body{
     @extend %color1;
     font-family: Roboto;
@@ -423,6 +434,7 @@ body{
             text-align: start;
             display: flex;
             align-items: center;
+            
             & span{
                 display: inline-block;
                 color: #fff;
@@ -439,6 +451,7 @@ body{
                 position: absolute;
                 left: 165px;
             }
+            @extend %btn-hover;
             @media (max-width:992px) {
                 .main-block_link-img{
                     position: absolute;
@@ -777,6 +790,7 @@ body{
             border-radius: 126px;
             border-bottom: 1px solid #059A02;
             margin-bottom: 44px;
+            @extend %btn-hover
         }
     }
     @media (max-width:442px) {
@@ -876,7 +890,6 @@ body{
         }
         &_link {
             margin-top: 40px;
-            padding-top: 22px;
             width: 227px;
             height: 72px;
             text-align: center;
@@ -885,7 +898,7 @@ body{
             color: #ffffff;
             border-radius: 126px;
             border-bottom: 1px solid #059A02;
-            
+            @extend %btn-hover;
             &::after{
                 content:url(/img/survey/arrow.svg);
                 position: relative;
@@ -1163,10 +1176,11 @@ body{
             text-align: center;
             border-bottom: 3px solid  #059A02 ;
             border-radius: 61px;
-            transition: 0.5s;
+            // transition: 1s;
             &:active{
                 border: none;
             }
+            @extend %btn-hover
 		}
 
 		&__container {
@@ -1193,7 +1207,8 @@ body{
                 text-align: center;
                 border: 1px  solid rgba(69, 196, 54, 1);
                 border-radius: 124px;
-                border: 1px solid #15B602
+                border: 1px solid #15B602;
+                @extend %btn-hover
 			}
             &_button:nth-child(3){
                 margin: 0 14px ;
@@ -1202,7 +1217,10 @@ body{
 			&_button-active {
                 color: #D5D5D5;
                 background: #F6F6F6;
-                border: 1px solid #D5D5D5
+                border: 1px solid #D5D5D5;
+                &:hover{
+                    color: white;
+                }
 			}
 		}
 
@@ -1213,10 +1231,20 @@ body{
 
 		&__exampleOurProjects {
 			&_link {
+                filter: contrast(0.8);
+                &:hover{
+
+                    filter: contrast(1.2);
+                   
+                }
+                &:active{
+                    transform: scale(0.9);
+                }
 			}
 			&_img {
                 width: 100%;
                 height: 100%;
+                
 			}
 		}
 }
@@ -1455,6 +1483,12 @@ body{
     margin-top: 40px;
     
     &_link {
+        color: #222222;
+        &:hover{
+            text-shadow:1px 1px 10px #15B602;
+            transform: scaleX(2)
+        
+        }
     }
 
     &__container {
@@ -1512,6 +1546,10 @@ body{
         }
 
         &_item {
+            &:hover{
+                transform: scaleX(1.05)
+            
+            }
         }
     }
 
@@ -1537,6 +1575,13 @@ body{
             justify-content: center;
             align-items: center;
             border-radius: 50%;
+            &:hover{
+                transform: scale(1.05);
+                box-shadow: 0px 0px 5px #000;
+            }
+            &:active{
+                transform: scale(0.9);
+            }
     }
 
     &__social-wrapper {
@@ -1557,6 +1602,7 @@ body{
         &_link {
             color: #afabab;
             text-decoration: underline;
+            
         }
     }
 }
