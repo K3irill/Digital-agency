@@ -371,8 +371,15 @@ body{
             text-align: center;   
             }
         }
-		&_title {
+		&_title-dynamic {
             @extend %color2;
+            font-size: 56px;
+            line-height: calc(66/56*100%); 
+            padding-bottom: 9px;  
+            font-weight: 600;        
+		}
+        &_title {
+            color: #222222;
             font-size: 56px;
             line-height: calc(66/56*100%); 
             padding-bottom: 9px;  

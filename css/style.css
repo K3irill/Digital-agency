@@ -93,7 +93,7 @@ body {
   color: #222222;
 }
 
-.row-blocks__card_price, .main-block_title {
+.row-blocks__card_price, .main-block_title-dynamic {
   color: #45C436;
 }
 
@@ -423,7 +423,14 @@ body {
     text-align: center;
   }
 }
+.main-block_title-dynamic {
+  font-size: 56px;
+  line-height: 117.8571428571%;
+  padding-bottom: 9px;
+  font-weight: 600;
+}
 .main-block_title {
+  color: #222222;
   font-size: 56px;
   line-height: 117.8571428571%;
   padding-bottom: 9px;
