@@ -338,7 +338,7 @@
             </div>
           </div>
         </div>
-        <div  data-hiddenby="1300"  class="page__survey ">
+        <div data-hiddenby="1300" class="page__survey">
           <div class="survey__container __container">
             <div class="survey__title-wrapper SamesTitle-wrapper">
               <h2 class="survey__title-wrapper_title SamesTitle-wrapper_title">
@@ -349,8 +349,20 @@
               </p>
             </div>
             <div class="survey__survey-wrapper">
+              <div class="surveyEndForm hidden">
+                <section class="surveyEndForm-wrap">
+                  <h2 class="surveyEndForm_title">Заполните форму и получите приятный бонус от нашей команды</h2>
+                  <section class="surveyEndForm__section">
+                    <input class="surveyEndForm_input-tel" type="tel" name="" id="" placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _"/>
+                    <button class="surveyEndForm_btn projects__options_button">
+                      Отправить
+                    </button>
+                  </section>
+                </section>
+                <img class="surveyEndForm_img" src="img/survey/price-bonus__box.png" alt="">
+              </div>
               <div class="survey__body">
-                <div class="survey__body__filling-line-wrapper">
+                <div class="survey__body__filling-line-wrapper" id="wrapper">
                   <div
                     class="survey__body__filling-line-wrapper_filling-line survey__body__filling-line-wrapper_filling-line_active"
                   ></div>
@@ -366,8 +378,14 @@
                 </div>
                 <p class="survey__body_que"><span>1</span> из 4 вопросов</p>
                 <h2 class="survey__body_title">Что Вы хотите получить?</h2>
-                <div class="survey__body__option">
-                  <div class="survey__body__option-wrapper">
+                <div
+                  class="survey__body__option survey-block-1 block"
+                  id="block-1"
+                >
+                  <div
+                    class="survey__body__option-wrapper card survey-block-1-card"
+                    data-id="1"
+                  >
                     <img
                       class="survey__body__option_img"
                       src="/img/survey/survey__body-img-1.svg"
@@ -375,7 +393,10 @@
                     />
                     <p class="survey__body__option_title">Сделать сайт</p>
                   </div>
-                  <div class="survey__body__option-wrapper">
+                  <div
+                    class="survey__body__option-wrapper card survey-block-1-card"
+                    data-id="2"
+                  >
                     <img
                       class="survey__body__option_img"
                       src="/img/survey/survey__body-img-2.svg"
@@ -383,7 +404,10 @@
                     />
                     <p class="survey__body__option_title">Больше заявок</p>
                   </div>
-                  <div class="survey__body__option-wrapper">
+                  <div
+                    class="survey__body__option-wrapper card survey-block-1-card"
+                    data-id="3"
+                  >
                     <img
                       class="survey__body__option_img"
                       src="/img/survey/survey__body-img-3.svg"
@@ -391,7 +415,10 @@
                     />
                     <p class="survey__body__option_title">Обслуживание сайта</p>
                   </div>
-                  <div class="survey__body__option-wrapper">
+                  <div
+                    class="survey__body__option-wrapper card survey-block-1-card"
+                    data-id="4"
+                  >
                     <img
                       class="survey__body__option_img"
                       src="/img/survey/survey__body-img-4.svg"
@@ -400,7 +427,142 @@
                     <p class="survey__body__option_title">Настройка рекламы</p>
                   </div>
                 </div>
-                <a href="" class="survey__body_link">Далее</a>
+                <div
+                  class="survey__body__option survey-block-2 block hidden"
+                  id="block-2"
+                >
+                  <div
+                    class="survey__body__option-wrapper card survey-block-2-card"
+                    data-id="5"
+                  >
+                    <img
+                      class="survey__body__option_img"
+                      src="/img/survey/survey-services-option.svg"
+                      alt=""
+                    />
+                    <p class="survey__body__option_title">Продажа услуги</p>
+                  </div>
+                  <div
+                    class="survey__body__option-wrapper card survey-block-2-card"
+                    data-id="6"
+                  >
+                    <img
+                      class="survey__body__option_img"
+                      src="/img/survey/survey-goods-option.svg"
+                      alt=""
+                    />
+                    <p class="survey__body__option_title">Продажа товара</p>
+                  </div>
+                  <div
+                    class="survey__body__option-wrapper card survey-block-2-card"
+                    data-id="7"
+                  >
+                    <img
+                      class="survey__body__option_img"
+                      src="/img/survey/survey-both-option.svg"
+                      alt=""
+                    />
+                    <p class="survey__body__option_title">Оба варианта</p>
+                  </div>
+                </div>
+                <div
+                  class="survey__body__option survey-block-3 block hidden"
+                  id="block-3"
+                >
+                  <div
+                    class="survey__body__option-wrapper card survey-block-3-card"
+                    data-id="8"
+                  >
+                    <img
+                      class="survey__body__option_img"
+                      src="/img/survey/survey-lending.svg"
+                      alt=""
+                    />
+                    <p class="survey__body__option_title">
+                      Сделать лендинг на готовом решении
+                    </p>
+                  </div>
+                  <div
+                    class="survey__body__option-wrapper card survey-block-3-card"
+                    data-id="9"
+                  >
+                    <img
+                      class="survey__body__option_img"
+                      src="/img/survey/survey-unice.svg"
+                      alt=""
+                    />
+                    <p class="survey__body__option_title">
+                      Разработать уникальный дизайн лендинга
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="survey__body__option survey-block-4 block hidden"
+                  id="block-4"
+                >
+                  <div
+                    class="survey__body__option-wrapper card survey-block-4-card"
+                    data-id="10"
+                  >
+                    <img
+                      class="survey__body__option_img"
+                      src="/img/survey/survey-SPM.svg"
+                      alt=""
+                    />
+                    <p class="survey__body__option_title">
+                      Интеграция с СРМ (Амо, Битрикс24)
+                    </p>
+                  </div>
+                  <div
+                    class="survey__body__option-wrapper card survey-block-4-card"
+                    data-id="11"
+                  >
+                    <img
+                      class="survey__body__option_img"
+                      src="/img/survey/survey-Yandex.svg"
+                      alt=""
+                    />
+                    <p class="survey__body__option_title">
+                      Яндекс директ реклама
+                    </p>
+                  </div>
+                  <div
+                    class="survey__body__option-wrapper card survey-block-4-card"
+                    data-id="12"
+                  >
+                    <img
+                      class="survey__body__option_img"
+                      src="/img/survey/survey-ads.svg"
+                      alt=""
+                    />
+                    <p class="survey__body__option_title">
+                      Настройка рекламы соц. сети
+                    </p>
+                  </div>
+                  <div
+                    class="survey__body__option-wrapper card survey-block-4-card"
+                    data-id="13"
+                  >
+                    <img
+                      class="survey__body__option_img"
+                      src="/img/survey/survey-google-ads.svg"
+                      alt=""
+                    />
+                    <p class="survey__body__option_title">Гугл реклама</p>
+                  </div>
+                  <div
+                    class="survey__body__option-wrapper card survey-block-4-card"
+                    data-id="14"
+                  >
+                    <img
+                      class="survey__body__option_img"
+                      src="/img/survey/survey-seo.svg"
+                      alt=""
+                    />
+                    <p class="survey__body__option_title">SEO продвижение</p>
+                  </div>
+                </div>
+                <button id="next-btn" class="survey__body_link">Далее</button>
               </div>
               <div class="survey__bonus">
                 <div class="survey__bonus__block-1"></div>
@@ -436,7 +598,7 @@
             </div>
           </div>
         </div>
-        <div data-hiddenby="2200" class="page__projects ">
+        <div data-hiddenby="2200" class="page__projects">
           <div class="projects__container __container">
             <div class="projects__title-wrapper">
               <h2 class="projects_title SamesTitle-wrapper_title">
