@@ -1456,6 +1456,9 @@ body {
   grid-template: 1fr 1fr/repeat(4, 1fr);
   gap: 10px 70px;
 }
+.footer__menu_item {
+  align-content: center;
+}
 .footer__menu_item:hover {
   transform: scaleX(1.05);
 }
