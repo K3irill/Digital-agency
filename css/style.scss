@@ -405,6 +405,11 @@ body{
             padding-bottom: 9px;  
             font-weight: 600;        
 		}
+        @media (max-width:425px) {
+            &_title-dynamic {
+                font-size: 36px;
+            }
+        }
         &_title {
             color: #222222;
             font-size: 56px;
