@@ -4,6 +4,28 @@ const numberOfImgEl = document.getElementById("number-changer-img");
 const sliderButtonUp = document.getElementById("sliderButtonUp");
 const sliderButtonDown = document.getElementById("sliderButtonDown");
 
+
+const slides = document.querySelectorAll("#slider .slide");
+let currentSlide = 0;
+slides[currentSlide].className = "slide showing";
+let slideInterval = setInterval(nextSlide, 15000);
+
+function perviousSlide() {
+  slides[currentSlide].className = "slide";
+  if (currentSlide <= 0) {
+  } else currentSlide = currentSlide - 1;
+
+  slides[currentSlide].className = "slide showing";
+}
+function nextSlide() {
+  slides[currentSlide].className = "slide";
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].className = "slide showing";
+}
+sliderButtonUp.addEventListener("click", perviousSlide);
+
+sliderButtonDown.addEventListener("click", nextSlide);
+
 // increase number of slide by click
 function changeDownSliderNumber(num) {
   num = Number(num);
@@ -77,23 +99,3 @@ sliderButtonUp.addEventListener("click", function () {
 
 //----
 
-const slides = document.querySelectorAll("#slider .slide");
-let currentSlide = 0;
-slides[currentSlide].className = "slide showing";
-let slideInterval = setInterval(nextSlide, 15000);
-
-function perviousSlide() {
-  slides[currentSlide].className = "slide";
-  if (currentSlide <= 0) {
-  } else currentSlide = currentSlide - 1;
-
-  slides[currentSlide].className = "slide showing";
-}
-function nextSlide() {
-  slides[currentSlide].className = "slide";
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].className = "slide showing";
-}
-sliderButtonUp.addEventListener("click", perviousSlide);
-
-sliderButtonDown.addEventListener("click", nextSlide);
