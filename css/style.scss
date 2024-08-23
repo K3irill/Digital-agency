@@ -780,15 +780,42 @@ body{
             top: 125px;
             left: 233px;
         }
-        &_price {
+        &_price-1, &_price-2, &_price-3{
             @extend %color2;
             font-size: 24px;
             font-weight: 600;
             padding:47px 0px 23px 0px;
             margin-bottom: 23px;
             position: relative;
+        }
+        &_price-1 {
+                &::after{
+                    content: "45 000 руб";
+                    position: absolute;
+                    top:20px;
+                    left: 142px;
+                    color: rgba(152, 152, 151, 1);
+                    font-size: 18px;
+                    font-weight: 400;
+                    text-decoration: line-through rgba(255, 52, 52, 0.6);
+                }
+            
+        }
+        &_price-2{
             &::after{
-                content: "45 000 руб";
+                content: "60 000 руб";
+                position: absolute;
+                top:20px;
+                left: 142px;
+                color: rgba(152, 152, 151, 1);
+                font-size: 18px;
+                font-weight: 400;
+                text-decoration: line-through rgba(255, 52, 52, 0.6);
+            }
+        }
+        &_price-3{
+            &::after{
+                content: "65 000 руб";
                 position: absolute;
                 top:20px;
                 left: 142px;
@@ -1232,11 +1259,10 @@ body{
                 border: 1px  solid rgba(69, 196, 54, 1);
                 border-radius: 124px;
                 border: 1px solid #15B602;
-                @extend %btn-hover
-			}
-            &_button:nth-child(3){
+                @extend %btn-hover;
                 margin: 0 14px ;
-            }
+			}
+            
 
 			&_button-active {
                 color: #D5D5D5;

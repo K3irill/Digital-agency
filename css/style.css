@@ -93,7 +93,7 @@ body {
   color: #222222;
 }
 
-.row-blocks__card_price, .main-block_title-dynamic {
+.row-blocks__card_price-1, .row-blocks__card_price-2, .row-blocks__card_price-3, .main-block_title-dynamic {
   color: #45C436;
 }
 
@@ -778,15 +778,37 @@ body {
   top: 125px;
   left: 233px;
 }
-.row-blocks__card_price {
+.row-blocks__card_price-1, .row-blocks__card_price-2, .row-blocks__card_price-3 {
   font-size: 24px;
   font-weight: 600;
   padding: 47px 0px 23px 0px;
   margin-bottom: 23px;
   position: relative;
 }
-.row-blocks__card_price::after {
+.row-blocks__card_price-1::after {
   content: "45 000 руб";
+  position: absolute;
+  top: 20px;
+  left: 142px;
+  color: rgb(152, 152, 151);
+  font-size: 18px;
+  font-weight: 400;
+  -webkit-text-decoration: line-through rgba(255, 52, 52, 0.6);
+          text-decoration: line-through rgba(255, 52, 52, 0.6);
+}
+.row-blocks__card_price-2::after {
+  content: "60 000 руб";
+  position: absolute;
+  top: 20px;
+  left: 142px;
+  color: rgb(152, 152, 151);
+  font-size: 18px;
+  font-weight: 400;
+  -webkit-text-decoration: line-through rgba(255, 52, 52, 0.6);
+          text-decoration: line-through rgba(255, 52, 52, 0.6);
+}
+.row-blocks__card_price-3::after {
+  content: "65 000 руб";
   position: absolute;
   top: 20px;
   left: 142px;
@@ -1151,8 +1173,6 @@ body {
   border: 1px solid rgb(69, 196, 54);
   border-radius: 124px;
   border: 1px solid #15B602;
-}
-.projects__options_button:nth-child(3) {
   margin: 0 14px;
 }
 .projects__options_button-active {
